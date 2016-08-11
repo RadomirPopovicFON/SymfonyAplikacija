@@ -1,0 +1,11 @@
+proba:
+    resource: "@ProbaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+kladionica:
+    resource: "@KladionicaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

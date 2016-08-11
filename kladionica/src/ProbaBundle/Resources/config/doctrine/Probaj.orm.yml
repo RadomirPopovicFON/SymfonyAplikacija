@@ -1,0 +1,11 @@
+ProbaBundle\Entity\Probaj:
+    type: entity
+    table: null
+    repositoryClass: ProbaBundle\Repository\ProbajRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

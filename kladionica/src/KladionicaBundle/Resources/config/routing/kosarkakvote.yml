@@ -1,0 +1,12 @@
+kosarkakvote_index:
+    path:     /
+    defaults: { _controller: "KladionicaBundle:KosarkaKvote:index" }
+    methods:  GET
+
+kosarkakvote_show:
+    path:     /{id}/show
+    defaults: { _controller: "KladionicaBundle:KosarkaKvote:show" }
+    methods:  GET
+
+
+

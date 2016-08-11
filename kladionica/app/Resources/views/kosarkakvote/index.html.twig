@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>KosarkaKvote list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Gostpobedjuje</th>
+                <th>Domacinpobedjuje</th>
+                <th>Hendikep</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for kosarkaKvote in kosarkaKvotes %}
+            <tr>
+                <td><a href="{{ path('kosarkakvote_show', { 'id': kosarkaKvote.id }) }}">{{ kosarkaKvote.id }}</a></td>
+                <td>{{ kosarkaKvote.gostPobedjuje }}</td>
+                <td>{{ kosarkaKvote.domacinPobedjuje }}</td>
+                <td>{{ kosarkaKvote.hendikep }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('kosarkakvote_show', { 'id': kosarkaKvote.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

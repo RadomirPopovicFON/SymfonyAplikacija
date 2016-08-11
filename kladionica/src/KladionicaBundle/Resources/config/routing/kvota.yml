@@ -1,0 +1,24 @@
+kvota_index:
+    path:     /
+    defaults: { _controller: "KladionicaBundle:Kvota:index" }
+    methods:  GET
+
+kvota_show:
+    path:     /{id}/show
+    defaults: { _controller: "KladionicaBundle:Kvota:show" }
+    methods:  GET
+
+kvota_new:
+    path:     /new
+    defaults: { _controller: "KladionicaBundle:Kvota:new" }
+    methods:  [GET, POST]
+
+kvota_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KladionicaBundle:Kvota:edit" }
+    methods:  [GET, POST]
+
+kvota_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KladionicaBundle:Kvota:delete" }
+    methods:  DELETE

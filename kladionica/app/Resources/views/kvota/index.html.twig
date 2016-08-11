@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<meta charset="utf-8" />
+
+<title>{% block title %}Muuuucart.rs!{% endblock %}</title>
+<style>
+    body {
+    background-color: lightblue;
+    }
+    
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>{{ block('title') }}</h1>
+            </div> 
+        </div> 
+    </header>
+
+
+<div class="container">
+
+<h1>Utakmice za <i>8.1.2015.</i></h1>
+
+<div class="well">
+
+{% block body %}
+    <h1>Kvota list</h1>
+
+    <table class="table table-hover" style="border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Domacin</th>
+                <th>Gost</th>
+                <th>1</th>
+                <th>2</th>
+                <th>X</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for kvotum in kvotas %}
+            <tr>
+                <td><a href="{{ path('kvota_show', { 'id': kvotum.id }) }}">{{ kvotum.id }}</a></td>
+                <td>{{ kvotum.domacin }}</td>
+                <td>{{ kvotum.gost }}</td>
+                <td>{{ kvotum.pobedjujeDomacin }}</td>
+                <td>{{ kvotum.pobedjujeGost }}</td>
+                <td>{{ kvotum.neresenIshod }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('kvota_show', { 'id': kvotum.id }) }}">prikazi</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('kvota_edit', { 'id': kvotum.id }) }}">azuriraj</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('kvota_new') }}">Ubaci novi podatak</a>
+        </li>
+    </ul>
+{% endblock %}
+
+</div></div>
+<p class="text-center">
+{% set a_variable = 'Copyright by Radomir, Uros, Nikola' %}{{ a_variable }}{#Ovo je mnogo lako za koriscenje#}
+<br/>
+{{ "Nadjite nas na adresi %s br %s."|format("Knez Mihajlova", "8") }}{#A tek ovo!#}
+</p>
+<br/>
+<br/>
+</body>
+</html>
+

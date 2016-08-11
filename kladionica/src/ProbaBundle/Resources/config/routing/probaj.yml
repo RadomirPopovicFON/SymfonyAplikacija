@@ -1,0 +1,24 @@
+probaj_index:
+    path:     /
+    defaults: { _controller: "ProbaBundle:Probaj:index" }
+    methods:  GET
+
+probaj_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProbaBundle:Probaj:show" }
+    methods:  GET
+
+probaj_new:
+    path:     /new
+    defaults: { _controller: "ProbaBundle:Probaj:new" }
+    methods:  [GET, POST]
+
+probaj_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProbaBundle:Probaj:edit" }
+    methods:  [GET, POST]
+
+probaj_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProbaBundle:Probaj:delete" }
+    methods:  DELETE

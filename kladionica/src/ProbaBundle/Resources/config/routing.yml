@@ -1,0 +1,7 @@
+proba_probaj:
+    resource: "@ProbaBundle/Resources/config/routing/probaj.yml"
+    prefix:   /probaj
+
+proba_homepage:
+    path:     /
+    defaults: { _controller: ProbaBundle:Default:index }

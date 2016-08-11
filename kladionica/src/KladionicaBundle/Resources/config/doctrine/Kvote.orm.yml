@@ -1,0 +1,27 @@
+KladionicaBundle\Entity\Kvote:
+    type: entity
+    table: null
+    repositoryClass: KladionicaBundle\Repository\KvoteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pobedjujeDomacin:
+            type: decimal
+            precision: '3'
+            scale: '2'
+            column: PobedjujeDomacin
+        pobedjujeGost:
+            type: decimal
+            precision: '3'
+            scale: '2'
+            column: PobedjujeGost
+        nereseno:
+            type: decimal
+            precision: '3'
+            scale: '2'
+            column: Nereseno
+    lifecycleCallbacks: {  }

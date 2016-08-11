@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<meta charset="utf-8" />
+
+<title>{% block title %}Muuuucart.rs!{% endblock %}</title>
+<style>
+    body {
+    background-color: lightblue;
+    }
+    
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>{{ block('title') }}</h1>
+            </div> 
+        </div> 
+    </header>
+
+
+
+<div class="container">
+
+<h1>Ubaci novo</h1>
+
+<div class="well">
+{% block body %}
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-default"type="submit" value="Ubaci" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('kvota_index') }}">Vrati se na pocetak</a>
+        </li>
+    </ul>
+{% endblock %}
+</div></div>
+<p class="text-center">
+{% set a_variable = 'Copyright by Radomir, Uros, Nikola' %}{{ a_variable }}{#Ovo je mnogo lako za koriscenje#}
+<br/>
+{{ "Nadjite nas na adresi %s br %s."|format("Knez Mihajlova", "8") }}{#A tek ovo!#}
+</p>
+<br/>
+<br/>
+</body>
+</html>

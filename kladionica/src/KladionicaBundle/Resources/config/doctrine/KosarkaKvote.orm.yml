@@ -1,0 +1,27 @@
+KladionicaBundle\Entity\KosarkaKvote:
+    type: entity
+    table: null
+    repositoryClass: KladionicaBundle\Repository\KosarkaKvoteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        gostPobedjuje:
+            type: decimal
+            precision: '2'
+            scale: '2'
+            column: GostPobedjuje
+        domacinPobedjuje:
+            type: decimal
+            precision: '2'
+            scale: '2'
+            column: DomacinPobedjuje
+        hendikep:
+            type: decimal
+            precision: '2'
+            scale: '2'
+            column: Hendikep
+    lifecycleCallbacks: {  }

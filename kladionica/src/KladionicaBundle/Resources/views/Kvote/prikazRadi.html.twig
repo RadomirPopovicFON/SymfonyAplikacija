@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moja aplikacija</title>
+<meta charset="utf-8" />
+<title>{% block title %}Welcome!{% endblock %}</title>
+</head>
+<body>
+<h1>Spisak kvota</h1>
+<table style="border: 1px solid black">
+<tr>
+<td>Domacin</td>
+<td>Gost</td>
+<td>Pobedjuje domacin - kvota</td>
+<td>Pobedjuje gost - kvota</td>
+<td>Neresen ishod - kvota</td>
+<ul id="navigation">
+{% for k in kk %}
+<tr>
+<td>{{ k.id }}</td>
+<td>{{ k.domacin }}</td>
+<td>{{ k.gost }}</td>
+<td>{{ k.pobedjujeDomacin }}</td>
+<td>{{ k.pobedjujeGost }}</td>
+<td>{{ k.neresenIshod }}</td>
+</tr>
+{% endfor %}
+</ul>
+
+
+</tr>
+</table>
+{% set a_variable = 'bar' %}
+        <h1>My Webpage</h1>
+        {{ a_variable }}
+
+{% set hello = "<strong>Hello</strong>" %}
+{{ hello }}
+{{ "<strong>world</strong>" }}
+{{ 'my first car'|title }}
+my first car
+</body>
+</html>

@@ -1,0 +1,12 @@
+kladionica_kvota:
+    resource: "@KladionicaBundle/Resources/config/routing/kvota.yml"
+    prefix:   /kvota
+
+kladionica_homepage:
+    path:     /
+    defaults: { _controller: KladionicaBundle:Default:index }
+kladionica_moja_ruta:
+    path:     /moja
+    defaults: { _controller: KladionicaBundle:Kladionica:prikaziMetoda }
+
+

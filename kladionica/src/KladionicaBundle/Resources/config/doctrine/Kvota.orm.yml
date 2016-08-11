@@ -1,0 +1,30 @@
+KladionicaBundle\Entity\Kvota:
+    type: entity
+    table: null
+    repositoryClass: KladionicaBundle\Repository\KvotaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        domacin:
+            type: string
+            length: '255'
+        gost:
+            type: string
+            length: '255'
+        pobedjujeDomacin:
+            type: decimal
+            precision: '2'
+            scale: 0
+        pobedjujeGost:
+            type: decimal
+            precision: '2'
+            scale: 0
+        neresenIshod:
+            type: decimal
+            precision: '2'
+            scale: 0
+    lifecycleCallbacks: {  }
