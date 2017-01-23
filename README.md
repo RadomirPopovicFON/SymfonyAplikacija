@@ -1,2 +1,3 @@
-# SymfonyAplikacija
-Primena CRUD operacija korišćenjem symfony frejmwork-a(PHP). Detaljno uputstvo instaliranja frejmwork-a u docx fajlu.
+# SymfonyApp
+
+Example of Symphony framework for PHP programming language, using simple CRUD commands. Instruction/Tutorial of the installment as well is in docx file.(Serbian only)
